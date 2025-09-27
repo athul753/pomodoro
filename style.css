@@ -1,0 +1,48 @@
+/* Container to center the nav like the screenshot */
+.nav-wrap {
+  max-width: 900px;
+  margin: 28px auto;
+  padding: 0 18px;
+}
+
+/* Tab bar */
+.tab-nav {
+  display: flex;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: inset 0 -2px rgba(0,0,0,0.06);
+}
+
+.tab-nav a {
+  flex: 1 1 0;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(#2aa0b8, #1f8fa0); /* bluish gradient */
+  border-right: 1px solid rgba(0,0,0,0.06);
+  letter-spacing: .2px;
+}
+
+.tab-nav a:last-child { border-right: none; }
+
+/* Active tab (darker) */
+.tab-nav a.active {
+  background: linear-gradient(#1d7f8b, #16656e);
+  box-shadow: inset 0 -3px rgba(0,0,0,0.08);
+}
+
+/* Slight hover effect */
+.tab-nav a:hover {
+  filter: brightness(0.97);
+}
+
+/* Small responsive tweak */
+@media (max-width:520px){
+  .tab-nav a { 
+    padding: 12px 10px; 
+    font-size: 14px; 
+  }
+}
