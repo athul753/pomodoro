@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Pomodoro Timer - StudyWithMe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -19,15 +20,27 @@
     <div class="main-container">
         <div class="timer-wrapper">
             <div class="timer-modes">
-                <button class="mode-btn active" data-mode="pomodoro">Pomodoro</button>
-                <button class="mode-btn" data-mode="short">Short break</button>
-                <button class="mode-btn" data-mode="long">Long break</button>
-            </div>
+    <button class="mode-btn active" data-mode="pomodoro">
+        <i class="fas fa-mug-hot"></i> Pomodoro
+    </button>
+    <button class="mode-btn" data-mode="short">
+        <i class="fas fa-coffee"></i> Short break
+    </button>
+    <button class="mode-btn" data-mode="long">
+        <i class="fas fa-bed"></i> Long break
+    </button>
+</div>
+
             <div class="timer-display" id="timerDisplay">25:00</div>
             <div class="timer-controls">
-                <button id="startPauseBtn">START</button>
-                <button id="resetBtn">RESET</button>
-            </div>
+    <button id="startPauseBtn">
+        <i class="fas fa-play"></i> START
+    </button>
+    <button id="resetBtn">
+        <i class="fas fa-rotate-left"></i> RESET
+    </button>
+</div>
+
         </div>
     </div>
     <div class="spotify-embed">
