@@ -1,4 +1,4 @@
-// Pomodoro Timer JS
+
 let modes = {
     pomodoro: 25 * 60,
     short: 5 * 60,
@@ -9,7 +9,6 @@ let timeLeft = modes[currentMode];
 let timerInterval = null;
 let display = document.getElementById('timerDisplay');
 
-// Mode switching
 document.querySelectorAll('.mode-btn').forEach(btn => {
     btn.onclick = function() {
         document.querySelector('.active').classList.remove('active');
@@ -19,7 +18,6 @@ document.querySelectorAll('.mode-btn').forEach(btn => {
     };
 });
 
-// Start/Pause
 document.getElementById('startPauseBtn').onclick = function() {
     if (!timerInterval) startTimer();
     else pauseTimer();
@@ -60,5 +58,4 @@ function updateDisplay() {
     display.textContent = `${String(min).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
 }
 
-// Initial setup
 updateDisplay();
