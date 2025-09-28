@@ -1,18 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pomodoro timer</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Pomodoro Timer - StudyWithMe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="nav-wrap" role="navigation" aria-label="Timer modes">
-    <nav class="tab-nav">
-      <a href="#pomodoro" class="active" aria-current="page">Pomodoro</a>
-      <a href="#short-break">Short Break</a>
-      <a href="#long-break">Long Break</a>
+    <nav class="navbar">
+        
+        
     </nav>
-  </div>
+    <nav id="navbar">
+        <div class="container">
+            <img src="logoLight.png" alt="Logo" class="navbar-logo">
+            <span class="navbar-title">Pomodoro</span>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="timer-wrapper">
+            <div class="timer-modes">
+                <button class="mode-btn active" data-mode="pomodoro">Pomodoro</button>
+                <button class="mode-btn" data-mode="short">Short break</button>
+                <button class="mode-btn" data-mode="long">Long break</button>
+            </div>
+            <div class="timer-display" id="timerDisplay">25:00</div>
+            <div class="timer-controls">
+                <button id="startPauseBtn">START</button>
+                <button id="resetBtn">RESET</button>
+            </div>
+        </div>
+    </div>
+    <div class="spotify-embed">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7EF8wVxBVhG?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

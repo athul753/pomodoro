@@ -1,48 +1,102 @@
-/* Container to center the nav like the screenshot */
-.nav-wrap {
-  max-width: 900px;
-  margin: 28px auto;
-  padding: 0 18px;
+.navbar-logo {
+    height: 40px;   
+    width: auto;    
+    max-width: 120px; 
+    object-fit: contain; 
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px 0px 0px 10px;
+}
+.navbar-title {
+    display: inline-block;
+    padding: 10px;
+    font-size: 2rem;
+    color: #ffffff;  
+}
+#navbar{
+    background-color: #04724D;
+}
+#navbar .container {
+    display: flex;
+    align-items: left;
+    margin: 0 auto;  
 }
 
-/* Tab bar */
-.tab-nav {
-  display: flex;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 2px;
-  overflow: hidden;
-  box-shadow: inset 0 -2px rgba(0,0,0,0.06);
+body {
+    background: #1F1F1F;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer-wrapper {
+    background: #04724D;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    padding: 36px 56px;
+    text-align: center;
+}
+.timer-modes {
+    margin-bottom: 18px;
+}
+.mode-btn {
+    margin: 0 8px;
+    padding: 7px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #B1B695;
+    cursor: pointer;
+    font-size: 15px;
+}
+.mode-btn.active {
+    background: #8D6346;
+    color: #1F1F1F;
+}
+.timer-display {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 18px 0;
+    letter-spacing: 2px;
+}
+.timer-controls button {
+    margin: 0 12px;
+    padding: 10px 38px;
+    border-radius: 7px;
+    border: none;
+    background: #B1B695;
+    color: #1F1F1F;
+    font-size: 20px;
+    cursor: pointer;
+}
+.spotify-embed {
+    position: fixed;
+    right: 26px;
+    bottom: 25px;
+    z-index: 10;
+}
+.mode-btn {
+    margin: 0 8px;
+    padding: 7px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #B1B695;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.tab-nav a {
-  flex: 1 1 0;
-  text-align: center;
-  padding: 14px 18px;
-  text-decoration: none;
-  font-weight: 700;
-  color: #ffffff;
-  background: linear-gradient(#2aa0b8, #1f8fa0); /* bluish gradient */
-  border-right: 1px solid rgba(0,0,0,0.06);
-  letter-spacing: .2px;
+.mode-btn:hover {
+    background-color: #a3aa84;
+    transform: scale(1.05);
 }
 
-.tab-nav a:last-child { border-right: none; }
-
-/* Active tab (darker) */
-.tab-nav a.active {
-  background: linear-gradient(#1d7f8b, #16656e);
-  box-shadow: inset 0 -3px rgba(0,0,0,0.08);
+.mode-btn.active {
+    background: #8D6346;
+    color: #1F1F1F;
 }
 
-/* Slight hover effect */
-.tab-nav a:hover {
-  filter: brightness(0.97);
-}
-
-/* Small responsive tweak */
-@media (max-width:520px){
-  .tab-nav a { 
-    padding: 12px 10px; 
-    font-size: 14px; 
-  }
-}
